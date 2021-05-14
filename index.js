@@ -1,20 +1,20 @@
 // Add your functions here
-function map(src, cb) {
-    let r = []
+function map(source, cb) {
+    let array = []
   
-    for (let i = 0; i < src.length; i++) {
-      let theElement = src[i]
-      r.push(cb(theElement))
+    for (let i = 0; i < source.length; i++) {
+      let theElement = source[i]
+      array.push(cb(theElement))
     }
   
-    return r;
+    return array;
   }
-  function reduce(src, fnct, start){
-    let arr = (!!start) ? start : src[0];
+  function reduce(source, functionn, start){
+    let array = (!!start) ? start : source[0];
     let i = (!!start) ? 0 : 1 
 
-    for (i; i < src.length; i++){
-        arr = fnct(src[i], arr)
+    for (i; i < source.length; i++){
+        array = functionn(source[i], array)
     }
-    return arr;
+    return array;
 } 
